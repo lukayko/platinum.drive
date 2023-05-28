@@ -25,8 +25,8 @@ const CarReservationForm = () => {
 
   // Update Formik Date Values
   useEffect(() => {
-    formik.values.daterange.startDate = range[0].startDate;
-    formik.values.daterange.endDate = range[0].endDate;
+    formik.values.daterange.startDate = range[0].startDate.toISOString();
+    formik.values.daterange.endDate = range[0].endDate.toISOString();
     console.log(formik.values);
   }, [range]);
 
@@ -46,7 +46,7 @@ const CarReservationForm = () => {
   const carData = location.state;
   // Phone Number Regex for Yup Validation
   const phoneRegExp =
-    /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+    /^(?:\+\d{3}\s\d{3}\s\d{3}\s\d{3}|\d{4}\s\d{3}\s\d{2}\s\d{3})$/;
 
   // Formik Initial Values
   const formik = useFormik({

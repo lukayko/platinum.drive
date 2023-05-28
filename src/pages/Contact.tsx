@@ -10,7 +10,7 @@ const Contact = () => {
 
   // Phone Number Regex for Yup Validation
   const phoneRegExp =
-    /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+    /^(?:\+\d{3}\s\d{3}\s\d{3}\s\d{3}|\d{4}\s\d{3}\s\d{2}\s\d{3})$/;
 
   // Formik Initial Values
   const formik = useFormik({

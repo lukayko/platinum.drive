@@ -1,5 +1,3 @@
-import React from "react";
-
 const Home = () => {
   return (
     <div className="mt-20 mb-16 mx-auto w-[90%]">
