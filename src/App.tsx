@@ -12,7 +12,7 @@ import {
   CarDetailPage,
   CarReservationForm,
   ReservationSuccess,
-  CommunityWall,
+  Community,
 } from "./pages";
 import { Navbar, Footer } from "./components";
 
@@ -29,7 +29,7 @@ function App() {
           <Route path="/our-fleet/:class/:idx" element={<CarDetailPage />} />
         </Route>
         <Route path="/reservation" element={<CarReservationForm />} />
-        <Route path="/community" element={<CommunityWall />} />
+        <Route path="/community" element={<Community />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/message-success" element={<FormSuccess />} />
         <Route path="/reservation-success" element={<ReservationSuccess />} />
