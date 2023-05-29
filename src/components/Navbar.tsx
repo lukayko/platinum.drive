@@ -10,7 +10,8 @@ const Navbar = () => {
     { name: "About Us", path: "/about-us", idx: 2 },
     { name: "Our Services", path: "/our-services", idx: 3 },
     { name: "Our Fleet", path: "/our-fleet", idx: 4 },
-    { name: "Contact Us", path: "/contact-us", idx: 5 },
+    { name: "Community", path: "/community", idx: 5 },
+    { name: "Contact Us", path: "/contact-us", idx: 6 },
   ];
 
   const LinksShort: Array<LinkType> = [
@@ -18,6 +19,7 @@ const Navbar = () => {
     { name: "About Us", path: "/about-us", idx: 2 },
     { name: "Our Services", path: "/our-services", idx: 3 },
     { name: "Our Fleet", path: "/our-fleet", idx: 4 },
+    { name: "Community", path: "/community", idx: 5 },
   ];
 
   let [open, setOpen] = useState(false);

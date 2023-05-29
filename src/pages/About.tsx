@@ -1,61 +1,114 @@
+import teamphoto from "../assets/others/team.jpg";
+import patrick from "../assets/others/patrick.jpg";
+import alan from "../assets/others/alan.jpg";
+import christina from "../assets/others/christina.jpg";
+
 const About = () => {
   return (
-    <div className="mt-24 w-[90%] mx-auto">
+    <div className="mt-24 w-[90%] mx-auto text-gray-500">
       <section>
-        <h1 className="font-bold text-2xl text-tertiary">
-          About platinum<span className="text-secondary">.drive</span>
+        <h1 className="font-bold text-2xl text-tertiary">About Us</h1>
+        <div className="max-w-[2048px] mt-4 w-full h-[325px] md:h-[550px] lg:h-[650px] mx-auto shadow-xl ">
+          <img
+            src={teamphoto}
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <p className="mt-4">
+          Step into the world of opulence and elegance with our luxury car
+          rental business in Bratislava. What started as a humble family-owned
+          enterprise has evolved into a testament to unwavering dedication and a
+          commitment to excellence over the course of a remarkable journey
+          spanning a decade.
+        </p>
+        <p className="mt-4">
+          From its modest beginnings, our company embraced a vision of providing
+          unparalleled luxury car rental services to discerning clients. With an
+          unwavering focus on delivering exceptional customer experiences, we
+          quickly gained recognition for our impeccable standards and attention
+          to detail. Every interaction, from the moment our clients step through
+          our doors, is infused with warmth, professionalism, and a personalized
+          touch that sets us apart.
+        </p>
+        <p className="mt-4">
+          Over the years, our dedication to excellence propelled us to new
+          heights. Today, we are proud to be a team of twelve passionate
+          individuals, each sharing a deep love for automobiles and an
+          unwavering commitment to customer satisfaction. Our carefully curated
+          fleet showcases a collection of the most coveted luxury vehicles,
+          meticulously maintained to ensure the utmost comfort, style, and
+          performance for our esteemed clients.
+        </p>
+        <p className="mt-4">
+          Recognizing the evolving needs and desires of our discerning
+          clientele, we expanded our range of services to encompass more than
+          just self-drive rentals. In 2021, we introduced our exclusive
+          chauffeur services, where our experienced and professional drivers
+          provide a seamless and luxurious journey for those who prefer to sit
+          back and enjoy the ride. Whether it's a special occasion, a corporate
+          event, or simply indulging in a touch of luxury, our chauffeur
+          services guarantee an experience that is nothing short of
+          extraordinary.
+        </p>
+        <p className="mt-4">
+          Not content with resting on our laurels, we constantly strive to
+          exceed expectations. That is why, in response to the growing demand
+          for reliable vehicle transport services, we introduced our specialized
+          vehicle transport division. Our team of experts ensures that your
+          prized possession is handled with the utmost care, providing safe and
+          secure transportation for your vehicles to any destination, near or
+          far.
+        </p>
+        <p className="mt-4">
+          As we reflect on our journey, we are humbled by the trust and loyalty
+          our clients have bestowed upon us. Each milestone reached is a
+          testament to the unwavering dedication and passion that drives our
+          team. We remain committed to continually refining and expanding our
+          services, seeking new ways to elevate the luxury car rental experience
+          for our esteemed clientele.
+        </p>
+        <p className="mt-4">
+          Discover the epitome of sophistication and unrivaled luxury with our
+          distinguished luxury car rental business in Bratislava. From our
+          humble roots to our current stature, we invite you to experience the
+          pinnacle of automotive excellence and indulge in a world of luxury
+          like no other.
+        </p>
+        <h1 className="font-bold text-2xl text-tertiary mt-4">
+          Meet Our Executives
         </h1>
-        <p>
-          For the past 10 years, our company has been a leader in the luxury
-          transportation industry, catering to discerning clients in Bratislava
-          and beyond. Throughout our remarkable journey, we have achieved
-          numerous milestones and experienced remarkable successes that have
-          solidified our position as a premier service provider.
-        </p>
-        <p>
-          Since our inception, our commitment to excellence has driven us to
-          deliver unparalleled customer satisfaction. We take pride in our
-          ability to match and exceed the expectations of our clients, ensuring
-          that every interaction with our company is met with professionalism,
-          attention to detail, and a personalized touch.
-        </p>
-        <p>
-          Over the years, we have built a reputation for providing top-notch
-          chauffeur services that offer the highest level of luxury, comfort,
-          and reliability. Our team of professional drivers undergoes rigorous
-          training, embodying the values of our company and exemplifying
-          exceptional service. We have received accolades from our clients for
-          our punctuality, immaculate fleet, and the seamless experiences we
-          provide.
-        </p>
-        <p>
-          One of our notable achievements has been our successful expansion into
-          car rental services. Recognizing the evolving needs of our clientele,
-          we have curated a distinguished fleet of premium vehicles, offering an
-          unmatched selection for those seeking style, performance, and
-          sophistication. Our dedication to maintaining our fleet's impeccable
-          condition has earned us the trust and loyalty of our customers.
-        </p>
-        <p>
-          We are also proud to have developed a strong network of global
-          partners, enabling us to offer seamless transportation services across
-          borders. This network, combined with our expertise in logistics and
-          documentation, allows us to facilitate car transportation between
-          countries efficiently and securely. Our ability to navigate complex
-          international regulations and deliver vehicles safely has garnered
-          acclaim from clients who entrust us with their prized possessions.
-        </p>
-        <p>
-          As we reflect on our 10-year history, we are grateful for the
-          relationships we have formed with our clients. Their trust and support
-          have been instrumental in our success. Looking to the future, we
-          remain dedicated to continuously enhancing our services, embracing
-          innovation, and embracing the unusual to ensure the complete
-          satisfaction of our valued customers. With our unwavering commitment
-          to excellence and a decade of accomplishments behind us, we stand
-          poised to create even more remarkable experiences in the years to
-          come.
-        </p>
+        <div className="flex flex-row w-full h-[60vh] justify-around mt-4 ">
+          <div>
+            <img
+              src={alan}
+              className="w-[350px] h-[90%] object-cover rounded-md shadow-lg"
+            />
+            <h2 className="font-bold text-lg text-center mt-2 text-tertiary">
+              Alan
+            </h2>
+            <p className="text-center">Public Relations Director</p>
+          </div>
+          <div>
+            <img
+              src={patrick}
+              className="w-[350px] h-[90%] object-cover rounded-md shadow-lg"
+            />
+            <h2 className="font-bold text-lg text-center mt-2 text-tertiary">
+              Patrick
+            </h2>
+            <p className="text-center">Chief Executive Officer</p>
+          </div>
+          <div>
+            <img
+              src={christina}
+              className="w-[350px] h-[90%] object-cover rounded-md shadow-lg"
+            />
+            <h2 className="font-bold text-lg text-center mt-2 text-tertiary">
+              Christina
+            </h2>
+            <p className="text-center">Chief Marketing Officer</p>
+          </div>
+        </div>
       </section>
     </div>
   );

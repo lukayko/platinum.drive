@@ -8,3 +8,4 @@ export { default as ErrorPage } from "./ErrorPage.tsx";
 export { default as CarDetailPage } from "./CarDetailPage.tsx";
 export { default as CarReservationForm } from "./CarReservationForm.tsx";
 export { default as ReservationSuccess } from "./ReservationSuccess.tsx";
+export { default as Community } from "./Community.tsx";
