@@ -34,13 +34,13 @@ const Navbar = () => {
           </p>
         </Link>
         {/*nazov viditelny na mobile */}
-        <p className="md:hidden">
+        <p className="md:hidden font-['Bruno_Ace']">
           platinum<span className="text-secondary">.drive</span>
         </p>
       </div>
       {/*linksBig MOBILE - v dropdown menu bude aj contact us*/}
       <div
-        className={`md:hidden fixed top-16 right-0 bg-tertiary text-white w-full py-2 px-8 text-xl flex flex-col items-start shadow-xl duration-[600ms] ${
+        className={`lg:hidden fixed top-16 right-0 bg-tertiary text-white w-full py-2 px-8 text-xl flex flex-col items-start shadow-xl duration-[600ms] ${
           open ? "-translate-x-50% opacity-100" : "translate-x-full opacity-0 "
         }`}
       >
@@ -58,7 +58,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div onClick={() => setOpen(!open)} className="md:hidden">
+      <div onClick={() => setOpen(!open)} className="lg:hidden">
         {open ? (
           <XMarkIcon className="h-8 w-8 text-white transition-shadow duration-500 ease-in-out" />
         ) : (
@@ -66,8 +66,8 @@ const Navbar = () => {
         )}
       </div>
       {/*linksSmall PC - velky display - contact us bude uplne vpravo a links budu v strede*/}
-      <div className="hidden md:block">
-        <ul className="flex flex-row justify-center items-center text-white gap-2 lg:gap-4">
+      <div className="hidden lg:block">
+        <ul className="flex flex-row text-base justify-center items-center text-white gap-2 lg:gap-2">
           {LinksShort.map((link) => (
             <li key={link.idx}>
               <NavLink
@@ -81,8 +81,8 @@ const Navbar = () => {
         </ul>
       </div>
       {/* contact button - iba na velkom displayi*/}
-      <div className="hidden flex-row text-white gap-2 justify-center items-middle md:flex lg:gap-4">
-        <p className="hidden font-bold lg:flex flex-row my-auto items-middle">
+      <div className="hidden flex-row text-white gap-2 justify-center items-middle lg:flex lg:gap-4">
+        <p className="hidden font-bold xl:flex flex-row my-auto items-middle">
           <PhoneIcon className="h-4 w-4 mx-1 my-auto" />
           +421 123 456 789
         </p>

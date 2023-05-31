@@ -1,12 +1,11 @@
+import EmployeeCard from "../components/EmployeeCard";
 import teamphoto from "../assets/others/team.jpg";
-import patrick from "../assets/others/patrick.jpg";
-import alan from "../assets/others/alan.jpg";
-import christina from "../assets/others/christina.jpg";
+import { employees } from "../data/employeeData";
 
 const About = () => {
   return (
-    <div className="mt-24 w-[90%] mx-auto text-gray-500">
-      <section>
+    <div className="mt-24 w-[90%] h-auto mx-auto text-gray-500">
+      <div>
         <h1 className="font-bold text-2xl text-tertiary">About Us</h1>
         <div className="max-w-[2048px] mt-4 w-full h-[325px] md:h-[550px] lg:h-[650px] mx-auto shadow-xl ">
           <img
@@ -14,6 +13,9 @@ const About = () => {
             className="w-full h-full object-cover rounded-lg"
           />
         </div>
+        <h1 className="font-bold text-xl text-tertiary mt-4">
+          Company History
+        </h1>
         <p className="mt-4">
           Step into the world of opulence and elegance with our luxury car
           rental business in Bratislava. What started as a humble family-owned
@@ -74,42 +76,27 @@ const About = () => {
           pinnacle of automotive excellence and indulge in a world of luxury
           like no other.
         </p>
-        <h1 className="font-bold text-2xl text-tertiary mt-4">
+        <h1 className="font-bold text-xl text-tertiary mt-4">
           Meet Our Executives
         </h1>
-        <div className="flex flex-row w-full h-[60vh] justify-around mt-4 ">
-          <div>
-            <img
-              src={alan}
-              className="w-[350px] h-[90%] object-cover rounded-md shadow-lg"
-            />
-            <h2 className="font-bold text-lg text-center mt-2 text-tertiary">
-              Alan
-            </h2>
-            <p className="text-center">Public Relations Director</p>
-          </div>
-          <div>
-            <img
-              src={patrick}
-              className="w-[350px] h-[90%] object-cover rounded-md shadow-lg"
-            />
-            <h2 className="font-bold text-lg text-center mt-2 text-tertiary">
-              Patrick
-            </h2>
-            <p className="text-center">Chief Executive Officer</p>
-          </div>
-          <div>
-            <img
-              src={christina}
-              className="w-[350px] h-[90%] object-cover rounded-md shadow-lg"
-            />
-            <h2 className="font-bold text-lg text-center mt-2 text-tertiary">
-              Christina
-            </h2>
-            <p className="text-center">Chief Marketing Officer</p>
-          </div>
+        <div className="flex flex-col mb-4 md:flex-row w-full h-auto lg:h-[60vh] gap-6 justify-around">
+          <EmployeeCard
+            img={employees[0].img}
+            name={employees[0].name}
+            position={employees[0].position}
+          />
+          <EmployeeCard
+            img={employees[1].img}
+            name={employees[1].name}
+            position={employees[1].position}
+          />
+          <EmployeeCard
+            img={employees[2].img}
+            name={employees[2].name}
+            position={employees[2].position}
+          />
         </div>
-      </section>
+      </div>
     </div>
   );
 };

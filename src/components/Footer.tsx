@@ -16,10 +16,38 @@ const Footer = () => {
     { name: "Contact Us", path: "/contact-us", idx: 6 },
   ];
 
+  const AdditionalLinks: Array<LinkType> = [
+    {
+      name: "Cookies Policy",
+      path: "/cookies",
+      idx: 1,
+    },
+    {
+      name: "Community Guidelines",
+      path: "/community-guide",
+      idx: 2,
+    },
+    {
+      name: "Terms of Service",
+      path: "/tos",
+      idx: 3,
+    },
+    {
+      name: "Legal Documentation",
+      path: "/legal",
+      idx: 4,
+    },
+    {
+      name: "FAQ",
+      path: "/faq",
+      idx: 5,
+    },
+  ];
+
   const date = new Date();
 
   return (
-    <section className="w-full mt-16 h-60 bg-tertiary text-white flex flex-row justify-between">
+    <div className="hidden w-full mt-16 h-60 bg-tertiary text-white lg:flex flex-row justify-between">
       {/* Logo + socials */}
       <div className="flex flex-col justify-start p-12">
         <p className="font-['Bruno_Ace'] text-2xl">
@@ -52,7 +80,7 @@ const Footer = () => {
           <ul>
             {LinksLong.map((link) => {
               return (
-                <li key={link.key}>
+                <li key={link.idx}>
                   <Link
                     to={link.path}
                     className="my-2 ease-in-out duration-300 hover:opacity-100 opacity-60"
@@ -66,46 +94,18 @@ const Footer = () => {
         </div>
         <div>
           <ul>
-            <li>
-              <Link
-                to={"/cookies"}
-                className="my-2 ease-in-out duration-300 hover:opacity-100 opacity-60"
-              >
-                Cookies Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/community-guide"}
-                className="my-2 ease-in-out duration-300 hover:opacity-100 opacity-60"
-              >
-                Community Guidelines
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/tos"}
-                className="my-2 ease-in-out duration-300 hover:opacity-100 opacity-60"
-              >
-                Terms of Service
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/legal"}
-                className="my-2 ease-in-out duration-300 hover:opacity-100 opacity-60"
-              >
-                Legal Documentation
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/faq"}
-                className="my-2 ease-in-out duration-300 hover:opacity-100 opacity-60"
-              >
-                FAQ
-              </Link>
-            </li>
+            {AdditionalLinks.map((link) => {
+              return (
+                <li key={link.idx}>
+                  <Link
+                    to={link.path}
+                    className="my-2 ease-in-out duration-300 hover:opacity-100 opacity-60"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -113,9 +113,9 @@ const Footer = () => {
         <p className=" opacity-60 ease-in-out duration-300 hover:opacity-100">
           Today's Date: {format(date, "dd MMM yyyy")}
         </p>
-        <p>© 2023 ELSI Dev. All rights reserved.</p>
+        <p className="text-sm">© 2023 ELSI Dev. All rights reserved.</p>
       </div>
-    </section>
+    </div>
   );
 };
 
