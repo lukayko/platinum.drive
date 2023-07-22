@@ -1,0 +1,11 @@
+export { default as Home } from "./Home.tsx";
+export { default as About } from "./About.tsx";
+export { default as OurFleet } from "./OurFleet.tsx";
+export { default as OurServices } from "./OurServices.tsx";
+export { default as Contact } from "./Contact.tsx";
+export { default as FormSuccess } from "./FormSuccess.tsx";
+export { default as ErrorPage } from "./ErrorPage.tsx";
+export { default as CarDetailPage } from "./CarDetailPage.tsx";
+export { default as CarReservationForm } from "./CarReservationForm.tsx";
+export { default as ReservationSuccess } from "./ReservationSuccess.tsx";
+export { default as Community } from "./Community.tsx";
