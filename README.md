@@ -2,6 +2,10 @@
 
 A fictional car rental webapp that I decided to build as a representation of my front end skills. I decided to go for car rental as I love cars and I felt that a webapp like this would be a good example of a real life project.
 
+## See the live project
+
+You can checkout the live project [HERE](https://64e7a820f4e89b04f81127ce--iridescent-snickerdoodle-087582.netlify.app/)
+
 ## How to run the project?
 
 Currently the website is in a stage when it is able to be booted on local server. There are plans to host it on a domain but that's something that I'm considering after I finish the planned tasks for this year. Currently, it is needed to download the project and run it locally.
