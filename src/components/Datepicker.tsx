@@ -40,7 +40,28 @@ const Datepicker = ({ range, setRange }: DatepickerProps): JSX.Element => {
     }
   };
 
+  // @ts-ignore
   const formik = useFormik({});
+
+  // Date Range Picker Component
+
+  let rangePicker = (
+    // @ts-ignore
+    <DateRange
+      editableDateInputs={true}
+      onChange={(item: SelectionEvent) => setRange([item.selection])}
+      moveRangeOnFirstSelection={false}
+      ranges={range}
+      rangeColors={["#212529"]}
+      minDate={new Date()}
+      showDateDisplay={false}
+      weekStartsOn={1}
+      id='calendar'
+      months={2}
+      direction='horizontal'
+      className='border-2 border-gray-300 rounded-md'
+    />
+  );
 
   return (
     <>
@@ -48,7 +69,7 @@ const Datepicker = ({ range, setRange }: DatepickerProps): JSX.Element => {
         className={`flex flex-row items-center text-sm mt-1 p-2 border-2  rounded-md cursor-pointer w-full active:border-secondary focus:border-secondary focus:ring-secondary ${
           open ? "border-secondary" : "border-gray-300"
         }`}
-        id="calendar"
+        id='calendar'
         readOnly
         onBlur={formik.handleBlur}
         onClick={() => setOpen(!open)}
@@ -58,22 +79,8 @@ const Datepicker = ({ range, setRange }: DatepickerProps): JSX.Element => {
         )}`}
       />
       {open && (
-        <div className="w-1/2" ref={calendarRef}>
-          {/* najdi support na tento component */}
-          <DateRange
-            editableDateInputs={true}
-            onChange={(item: SelectionEvent) => setRange([item.selection])}
-            moveRangeOnFirstSelection={false}
-            ranges={range}
-            rangeColors={["#212529"]}
-            minDate={new Date()}
-            showDateDisplay={false}
-            weekStartsOn={1}
-            id="calendar"
-            months={2}
-            direction="horizontal"
-            className="border-2 border-gray-300 rounded-md"
-          />
+        <div className='w-1/2' ref={calendarRef}>
+          {rangePicker}
         </div>
       )}
     </>
